@@ -1,0 +1,20 @@
+*** Settings ***
+Library    SeleniumLibrary
+Library    Collections
+
+*** Variables ***
+@{uname}    Invalid_Login     admin
+@{pwd}    Invalid_Password    MaharaDemo
+*** Keywords ***
+Open Browser To Mahara
+    Open Browser    https://demo.mahara.org/    chrome
+    Maximize Browser Window
+    
+Login To Mahara
+    Input Text    id=login_login_username    ${uname}
+    Input Password    name=login_password    ${pwd}
+    Click Button    Login
+
+Capture Screenshot And Close Browser
+    Capture Page Screenshot
+    Close Browser

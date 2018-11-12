@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.3 on win32)" generated="20181029 19:34:28.960">
+<suite id="s1" name="Mahara Test" source="C:\Users\lulu\eclipse-workspace\HackerSchool\Tests\Workshop\Mahara_Test.robot">
+<test id="s1-t1" name="Mahara Admin Login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://demo.mahara.org/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20181029 19:34:29.140" level="INFO">Opening browser 'chrome' to base url 'https://demo.mahara.org/'.</msg>
+<status status="PASS" starttime="20181029 19:34:29.139" endtime="20181029 19:34:36.635"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20181029 19:34:36.637" endtime="20181029 19:34:37.778"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=login_login_username</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20181029 19:34:37.780" level="INFO">Typing text 'Admin' into text field 'id=login_login_username'.</msg>
+<status status="PASS" starttime="20181029 19:34:37.779" endtime="20181029 19:34:37.910"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=login_password</arg>
+<arg>MaharaDemo</arg>
+</arguments>
+<msg timestamp="20181029 19:34:37.911" level="INFO">Typing password into text field 'name=login_password'.</msg>
+<status status="PASS" starttime="20181029 19:34:37.910" endtime="20181029 19:34:38.072"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20181029 19:34:38.073" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" starttime="20181029 19:34:38.073" endtime="20181029 19:34:42.060"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20181029 19:34:52.061" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20181029 19:34:42.060" endtime="20181029 19:34:52.061"></status>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>https://demo.mahara.org/user/james-jetts</arg>
+</arguments>
+<msg timestamp="20181029 19:34:52.126" level="INFO">Current page contains link 'https://demo.mahara.org/user/james-jetts'.</msg>
+<status status="PASS" starttime="20181029 19:34:52.063" endtime="20181029 19:34:52.126"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath=//a[@class="user-icon"</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181029 19:34:52.498" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20181029 19:34:52.160" endtime="20181029 19:34:52.499"></status>
+</kw>
+<msg timestamp="20181029 19:34:52.551" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //a[@class="user-icon" because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[@class="user-icon"' is not a valid XPath expression.
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.17134 x86_64)
+</msg>
+<status status="FAIL" starttime="20181029 19:34:52.127" endtime="20181029 19:34:52.551"></status>
+</kw>
+<status status="FAIL" starttime="20181029 19:34:29.138" endtime="20181029 19:34:52.552" critical="yes">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //a[@class="user-icon" because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//a[@class="user-icon"' is not a valid XPath expression.
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.17134 x86_64)
+</status>
+</test>
+<status status="FAIL" starttime="20181029 19:34:28.962" endtime="20181029 19:34:52.554"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Mahara Test">Mahara Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
